@@ -43,7 +43,10 @@ describe('Test Watcher', () => {
       assert.calledWith(
         telemetryStub,
         FORCE_LWC_TEST_WATCH_LOG_NAME,
-        mockExecutionTime
+        mockExecutionTime,
+        {
+          workspaceType: 'SFDX'
+        }
       );
     });
   });

@@ -143,7 +143,10 @@ describe('Force LWC Test Debug - Code Action', () => {
       assert.calledWith(
         telemetryStub,
         FORCE_LWC_TEST_DEBUG_LOG_NAME,
-        mockExecutionTime
+        mockExecutionTime,
+        {
+          workspaceType: 'SFDX'
+        }
       );
     });
   });
